@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Portfolio Leopold</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+
+      <body>
+       <div id="banner">
+        <div id="wrapper">
+         <div id="container">
+ 	  <div class="index">
+           <center>
+            <a href="/" style="btn btn-primary">ACCUEUIL</a>
+            <p>·</p>
+       	    <a href="/parcours/" style="btn btn-primary">MON PARCOURS</a>
+            <p>·</p>
+  	    <a href="/competences/" style="btn btn-primary">MES COMPETENCES</a>
+            <p>·</p>
+       	    <a href="/projets/" style="btn btn-primary">MES PROJETS</a>
+            <p>·</p>
+    	    <a href="/contact/" style="btn btn-primary">CONTACT</a>
+          </div>
+         </div>
+         <div id="banner">
+           <img class="banner-img" src="{% static 'images/banner-ppe.jpg' %}">
+         <div id="banner-header">
+         <strong><h1>PORTFOLIO</h1></strong>
+         </div>
+         </div>
+       	 {% block content %}
+         {% endblock %}
+        </div>
+       </div>
+      </div>
+    
+     <footer class="footer"> test </footer>
+     
+    </center>
+   </body>
+</html>
