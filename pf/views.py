@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.core.servers.basehttp import FileWrapper
+from wsgiref.util import FileWrapper
 import os
 
 # Create your views here.
