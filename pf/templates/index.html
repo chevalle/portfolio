@@ -1,8 +1,18 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
-<h4> Page d'Accueuil </h4>
 
-<p> Portfolio de Léopold Cheval </p>
-
+<div id="me">
+<img src="{% static '/images/photoacc.png' %}">
+</div>
+<br>
+<p> Welcome </p>
+<p> I developped this website using django and PythonAnywhere to use it as <br>
+   a portfolio. You'll find everything there is to know about me, my skills 
+   and the projects I have done. <br> I am currently doing my apprenticeship at Natixis.   </p>
+ 
+<div class="natixis">
+ <img src="{% static '/images/logo_natixis.png' %}">
+ <a href="https://www.natixis.com">Visit Natixis' website</a>
+</div>
 {% endblock %}
