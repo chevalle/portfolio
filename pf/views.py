@@ -4,7 +4,10 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from django.http import HttpResponse
 from wsgiref.util import FileWrapper
-import os
+import os, tempfile, zipfile
+from django.conf import settings
+import mimetypes
+
 
 # Create your views here.
 
@@ -25,13 +28,50 @@ def contact(request):
     return render(request, 'contact.html')
 
 def projets(request): 
+
  
     return render(request, 'projets.html')
 
+
+def index_eng(request): 
+ 
+    return render(request, 'index-eng.html')
+	
+def skills(request): 
+ 
+    return render(request, 'skills.html')
+
+def background(request): 
+ 
+    return render(request, 'background.html')
+
+def contact_eng(request): 
+ 
+    return render(request, 'contact-eng.html')
+
+def projects(request): 
+ 
+    return render(request, 'projects.html')
+
+def download_zip(request):
+    zip_path = root + "A.zip"
+    zip_file =  open(zip_path, 'rb')
+    response = HttpResponse(zip_file, content_type='application/zip')
+    response['Content-Disposition'] = 'attachment; filename=%s' % 'A.zip'
+    response['Content-Length'] = os.path.getsize(zip_path)
+    zip_file.close()
+
+    return response
+	
+	
 def send_file(request):
 
-    filename = __file__ # Select your file here.                                
-    wrapper = FileWrapper(file(filename))
-    response = HttpResponse(wrapper, content_type='text/plain')
-    response['Content-Length'] = os.path.getsize(filename)
-    return response
+
+  filename     = "static/ppe1.zip" # Select your file here.
+  download_name ="ppe1.zip"
+  wrapper      = FileWrapper(open(filename))
+  content_type = mimetypes.guess_type(filename)[0]
+  response     = HttpResponse(wrapper,content_type=content_type)
+  response['Content-Length']      = os.path.getsize(filename)    
+  response['Content-Disposition'] = "attachment; filename=%s"%download_name
+  return response

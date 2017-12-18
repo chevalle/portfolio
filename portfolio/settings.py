@@ -25,7 +25,7 @@ SECRET_KEY = 'e&avq$6fn30s-ns+ck#c@0#bl9mj=a8_40j!$&wj(-1nuw*8(k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["secretsanta", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["portfolio", "127.0.0.1"]
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pf',
+    'pf'
 ]
 
 MIDDLEWARE = [
