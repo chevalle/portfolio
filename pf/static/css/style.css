@@ -80,3 +80,7 @@ a:hover {
 float: right;
 display: inline;
 }
+
+p {
+  font-family: 'Slabo 27px';
+}
