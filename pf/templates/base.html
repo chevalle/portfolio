@@ -1,33 +1,46 @@
 {% load staticfiles %}
 
-<html>
-    <head>
-        <title>Portfolio Leopold</title>
-		<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
-		<link href='https://fonts.googleapis.com/css?family=Spectral+SC' rel='stylesheet'>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    </head>
-	   <body>
-	    
-		   
-            <a class="index" href="/">ACCUEIL</a>
-       	    <a class="index" href="/parcours/">MON PARCOURS</a>
-  	        <a class="index" href="/competences/">MES COMPETENCES</a>
-       	    <a class="index" href="/projets/">MES PROJETS</a>
-    	    <a class="index" href="/contact/">CONTACT</a>
 
-			<a class="lang" href="/">FR</a>
-			<p class="lang"> · </p>
-			<a class="lang" href="/eng/home">EN</a>
-		
-            <br>
-			<center>
-		    <p id="header"> PORTFOLIO </p>
-		    </center>
-        <div class="content">
-       	 {% block content %}
-         {% endblock %}
-        </div>
-        </body>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+</head>
+<body>
+
+<div class="bgimg-1">
+  <div class="caption">
+   <img src="{% static '/images/logolixir.png' %}">
+  <h1> Lixir fête ses <em> 10 ans </em>, découvrez ce que nous vous réservons sur <em> cette page </em> </h1>
+ 
+  </div>
+</div>
+
+
+
+<div class="bgimg-2">
+  <div class="caption">
+ 
+  </div>
+   <img src="{% static '/images/Something Special.png' %}">
+</div>
+
+
+<div class="bgimg-3">
+
+<h2> La <em> vidéo </em> promo ! 
+<iframe src="https://www.youtube.com/embed/ONaplxbG5Mg?ecver=2" style="position:absolute;width:50%;height:50%;left:300px; top: 150px;" width="641" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+
+<div class="bgimg-4">
+
+  <div class="caption">
+  </div>
+</div>
+
+
+</body>
 </html>

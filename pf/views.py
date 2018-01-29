@@ -13,45 +13,8 @@ import mimetypes
 
 def index(request):
 
-    return render(request, 'index.html') 
+    return render(request, 'base.html') 
 
-def parcours(request): 
- 
-    return render(request, 'parcours.html') 
-
-def competences(request):
-
-    return render(request, 'competences.html')
-
-def contact(request):
-
-    return render(request, 'contact.html')
-
-def projets(request): 
-
- 
-    return render(request, 'projets.html')
-
-
-def index_eng(request): 
- 
-    return render(request, 'index-eng.html')
-	
-def skills(request): 
- 
-    return render(request, 'skills.html')
-
-def background(request): 
- 
-    return render(request, 'background.html')
-
-def contact_eng(request): 
- 
-    return render(request, 'contact-eng.html')
-
-def projects(request): 
- 
-    return render(request, 'projects.html')
 
 def download_zip(request):
     zip_path = root + "A.zip"
